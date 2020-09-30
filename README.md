@@ -12,3 +12,6 @@ When the user clicks on a location in the search history, they are presented wit
 
 When the user opens the dashboard, they are presented with the last searched location forecast.
 
+
+![weather-dashboard1](./assets/weatherScreenshot1.png)
+![weather-dashboard2](./assets/weatherScreenshot2.png)
