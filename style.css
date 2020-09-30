@@ -1,0 +1,49 @@
+#locationSearch {
+    padding-top: 20px;
+}
+
+.mainPage {
+    padding-bottom: 30px;
+}
+
+img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);  
+}
+
+.locationName {
+    font-weight: bold;
+    margin-top: -30px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .card-header {
+      font-size: 7pt;
+    }
+    img.responsive {
+        width: 50px;
+    }
+    .card-text {
+        font-size: 7pt;
+  }
+}
+  @media screen and (max-width: 575px) {
+    .card-header {
+        font-size: 12pt;
+    }
+    img.responsive {
+        width: 100px;
+    }
+    .card-text {
+        font-size: 12pt;
+    }
+    #locationSearch {
+        margin: 20px;
+    }
+    .locationName {
+        font-size: 24pt;
+        margin-top: 10px;
+    }
+}

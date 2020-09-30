@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <span class="navbar-brand mb-0 h1 ml-5">Weather Dashboard</span>
+    </nav>
+
+    <br>
+    <div class="container mainPage">
+        <div class="row wrapper">
+
+            <aside class="col-md-3 mb-2 mt-2 bg-light rounded-0 border border-primary" id="locationSearch">
+                <div class="container">
+                    <h3>Location Search:</h3>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" id="searchTerm">
+                            <button class="btn btn-primary" id="search-btn"> <i class="fa fa-search"></i> </button>
+                        </div>                        
+                    </form>
+                </div>
+                <div class="container searchHistory mb-4"></div>
+            </aside>
+
+            <main class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jumbotron ml-2 mt-2 rounded-0">
+                            <h1 class="display-4 locationName">Location Name</h1>
+                            <h3 id="todaysDate"></h3>
+                            <img id="todayImg">
+                            <div class="row">
+                                <table class="table table-borderless col-md-4">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Temperature:</th>
+                                            <td id="temperature" class="rounded-0 col-md-4"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Humidity:</th>
+                                            <td id="humidity" class="rounded-0 col-md-4"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Wind Speed:</th>
+                                            <td id="windSpeed" class="rounded-0 col-md-4"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" >UV Index:</th>
+                                            <td id="uvIndex" class="uvRating rounded-0 col-md-4"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <h2>5-Day Forecast:</h2></div>
+                    <!-- <div class="row"> -->
+                    <!-- <div class="card-container"> -->
+                        <div class="card-group">
+
+                            <div class="card text-white bg-info ml-2 mb-2 rounded-0">
+                                <div class="card-header bg-primary text-center" id="day1">Day 1</div>
+                                <div class="card-body">
+                                    <img id="imgDay1" class="responsive">
+                                    <p class="card-text" id="high1">High: </p>
+                                    <p class="card-text" id="low1">Low: </p>
+                                    <p class="card-text" id="humidity1">Humidity: </p>
+                                    <p class="card-text" id="uvIndex1">UV index: </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-info ml-2 mb-2 rounded-0">
+                                <div class="card-header bg-primary text-center" id="day2">Day 2</div>
+                                <div class="card-body">
+                                    <img id="imgDay2" class="responsive">
+                                    <p class="card-text" id="high2">High: </p>
+                                    <p class="card-text" id="low2">Low: </p>
+                                    <p class="card-text" id="humidity2">Humidity: </p>
+                                    <p class="card-text" id="uvIndex2">UV index: </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-info ml-2 mb-2 rounded-0">
+                                <div class="card-header bg-primary text-center" id="day3">Day 3</div>
+                                <div class="card-body">
+                                    <img id="imgDay3" class="responsive">
+                                    <p class="card-text" id="high3">High: </p>
+                                    <p class="card-text" id="low3">Low: </p>
+                                    <p class="card-text" id="humidity3">Humidity: </p>
+                                    <p class="card-text" id="uvIndex3">UV index: </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-info ml-2 mb-2 rounded-0">
+                                <div class="card-header bg-primary text-center" id="day4">Day 4</div>
+                                <div class="card-body">
+                                    <img id="imgDay4" class="responsive">
+                                    <p class="card-text" id="high4">High: </p>
+                                    <p class="card-text" id="low4">Low: </p>
+                                    <p class="card-text" id="humidity4">Humidity: </p>
+                                    <p class="card-text" id="uvIndex4">UV index: </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-info ml-2 mb-2 rounded-0">
+                                <div class="card-header bg-primary text-center" id="day5">Day 5</div>
+                                <div class="card-body">
+                                    <img id="imgDay5" class="responsive">
+                                    <p class="card-text" id="high5">High: </p>
+                                    <p class="card-text" id="low5">Low: </p>
+                                    <p class="card-text" id="humidity5">Humidity: </p>
+                                    <p class="card-text" id="uvIndex5">UV index: </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                
+            </main>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
